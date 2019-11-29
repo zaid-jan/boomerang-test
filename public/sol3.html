@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <link href="./css/sol2.css" rel="stylesheet">
+    <link href="./css/sol3.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>    
+    <script src="js/renderGraph3.js"></script>
     <script src="js/sol3.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="js/treant/Treant.css" type="text/css"/>
+    <script src="js/treant/vendor/raphael.js"></script>
+    <script src="js/treant/Treant.js"></script>
+    <title>Solution 3</title>
 </head>
 <body>
-    <script>
-    </script>
+    <div class="container">
+        <div class="inputDiv">
+            <div>
+                <input id="please"value="" data-role="tagsinput">
+            </div>
+            <div class="inputButton">
+                <button type="button" onclick="handleSumTree()" class="btn btn-success">Find Sum Tree</button>
+            </div>
+        </div>    
+        <div class=row>
+            <div id="tree-orig" style="width:50%; height: 400px"> </div>
+            <div id="tree-sum" style="width:50%; height: 400px"> </div>
+        </div>
+    </div>
+    
 </body>
 </html>

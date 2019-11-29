@@ -1,12 +1,15 @@
-const sol3 = (input = "1,7,5,50,40,10") => {
-    let arr = input.split(',').map(item => parseInt(item))
+const handleSumTree = () => {
+    let arr = $("#please").val().split(',').map(item => parseInt(item))
     tree = {}
     convertToBst(tree, arr, 0, arr.length)
     let sumTree = JSON.parse(JSON.stringify(tree))
     console.log("sumtree before", sumTree)
+    temp = sumTree
     convertToSumTree(sumTree, 0, 0)
     console.log("sumtree after", sumTree)
     inorder(sumTree, 0, 0)
+    console.log(JSON.stringify(sumTree))
+    wrap(tree, sumTree)
 }
 
 const convertToSumTree = (sumTree, curr, sum) => {
@@ -59,4 +62,3 @@ const createRightTree = (tree, cut) => {
     }
     return rightTree
 }
-sol3()

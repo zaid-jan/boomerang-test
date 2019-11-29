@@ -1,0 +1,11 @@
+.row {
+    display: flex;
+    flex-direction: row;
+}
+#tree-orig #tree-sum {
+    flex: 1
+}
+
+.container {
+    width: 99%
+}
