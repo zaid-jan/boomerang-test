@@ -1,7 +1,10 @@
-const express = require('express');
-const app = express();
+const express =  require('express');
 const bodyParser = require('body-parser');
 const path = require('path')
+const bSol1 = require('./questions/bSol1')
+const bSol2 =  require('./questions/bSol2')
+const bSol3 = require('./questions/bSol3')
+const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -26,4 +29,20 @@ app.get('/two', (req, res) => {
 
 app.get('/three', (req, res) => {
     res.sendFile(__dirname + '/public/sol3.html')
+})
+
+app.post('/sol1', (req, res) => {
+    let input = req.body.strings
+    res.send(bSol1.sol1(input))
+})
+
+app.post('/sol2', (req, res) => {
+    let input = req.body.directions
+    // console.log(req.body)
+    res.send(bSol2.sol2(input))
+})
+
+app.post('/sol3', (req, res) => {
+    let input = req.body.postorder
+    res.send(bSol3.sol3(input))
 })
