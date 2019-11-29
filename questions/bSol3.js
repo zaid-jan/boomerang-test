@@ -1,18 +1,35 @@
+let inorderArr
 const sol3 = (input) => {
+    inorderArr = []
     let tree = {}
     let arr = input.split(',').map(item => parseInt(item))
     convertToBst(tree, arr, 0, arr.length)
     let sumTree = JSON.parse(JSON.stringify(tree))
-    console.log("sumtree before", sumTree)
     temp = sumTree
-    convertToSumTree(sumTree, 0, 0)
-    console.log("sumtree after", sumTree)
-    inorder(sumTree, 0, 0)
-    console.log(JSON.stringify(sumTree))
-    return {
-        tree,
-        sumTree
+    convertToSumTree(sumTree, 0, 0)    
+    inorder(sumTree, 0)
+    // console.log(inorderArr)
+    // console.log(inorderArr.length, arr.length)
+    if(inorderArr.length !== arr.length){
+        return {
+            error: true
+        }
     }
+    else {
+        return {
+            error: false,
+            tree,
+            sumTree
+        }
+    }
+}
+
+const inorder = (sumTree, curr) => {
+    if(!sumTree.hasOwnProperty(curr))
+        return;
+    inorder(sumTree, curr * 2 + 1);
+    inorderArr = inorderArr.concat(sumTree[curr])
+    inorder(sumTree, curr * 2 + 2)
 }
 
 const convertToSumTree = (sumTree, curr, sum) => {
@@ -24,14 +41,6 @@ const convertToSumTree = (sumTree, curr, sum) => {
     convertToSumTree(sumTree, curr * 2 + 2, currSum)
     sumTree[curr] = currSum + sum
     return sumTree[curr];
-}
-
-const inorder = (sumTree, curr) => {
-    if(!sumTree.hasOwnProperty(curr))
-        return;
-    inorder(sumTree, curr * 2 + 1);
-    console.log(sumTree[curr])
-    inorder(sumTree, curr * 2 + 2)
 }
 
 const convertToBst = (bst, arr, curr, size) => {    
