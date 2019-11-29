@@ -12,6 +12,10 @@ app.listen(8000, ()=> {
     console.log('app listening at port 8000');
 });
 
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/sol1.html')
+})
+
 app.get('/one', (req, res) => {
     res.sendFile(__dirname + '/public/sol1.html')
 })
