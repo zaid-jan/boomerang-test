@@ -19,3 +19,7 @@ app.get('/one', (req, res) => {
 app.get('/two', (req, res) => {
     res.sendFile(__dirname+ '/public/sol2.html')
 })
+
+app.get('/three', (req, res) => {
+    res.sendFile(__dirname + '/public/sol3.html')
+})
