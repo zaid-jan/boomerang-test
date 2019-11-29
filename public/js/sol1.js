@@ -1,4 +1,4 @@
-let strings = ""
+let strings = 'xyz abc mnp "asdf dfaa asdf" asd "fdas asdsdaff"'
 const handleInput = (e) => {
     strings = e
 }

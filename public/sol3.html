@@ -13,16 +13,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>    
     <script src="js/renderGraph.js"></script>
     <script src="js/sol3.js"></script>
+    <link href="css/navbar.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="js/treant/Treant.css" type="text/css"/>
     <script src="js/treant/vendor/raphael.js"></script>
     <script src="js/treant/Treant.js"></script>
     <title>Solution 3</title>
 </head>
 <body>
+    <ul>
+        <li><a href="/one">Question 1</a></li>
+        <li><a href="/two">Question 2</a></li>
+        <li><a href="/three">Question 3</a></li>
+    </ul>
     <div class="container">
         <div class="inputDiv">
             <div>
-                <input id="please"value="" data-role="tagsinput">
+                <input id="please"value="1,7,5,50,40,10" data-role="tagsinput">
             </div>
             <div class="inputButton">
                 <button type="button" onclick="handleSumTree()" class="btn btn-success">Find Sum Tree</button>
