@@ -1,5 +1,5 @@
 const createMarkup = (name, tree) => {
-    let finalMarkup = `{"chart": {"container": "#${name}"},"nodeStructure": {${createNode(tree, 0)}}}`
+    let finalMarkup = `{"chart": {"container": "${name}"},"nodeStructure": {${createNode(tree, 0)}}}`
     finalMarkup = filterMarkup(finalMarkup)
     console.log("final", finalMarkup)
     return finalMarkup
@@ -22,11 +22,9 @@ const filterMarkup = (finalMarkup) => {
     return finalMarkup;
 }
 
-const wrap = (orig, sum) => {
-    let markupOrig = JSON.parse(createMarkup('tree-orig',orig ))
-    let markupSum = JSON.parse(createMarkup('tree-sum', sum))    
-    let chartOrig = new Treant(markupOrig, $ );
-    let chartSum = new Treant(markupSum, $ );
+const wrap = (tree, pos) => {
+    let markup = JSON.parse(createMarkup(pos, tree))
+    let chart = new Treant(markup, $);
 }
 
 

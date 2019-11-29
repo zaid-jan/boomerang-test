@@ -10,20 +10,28 @@
         crossorigin="anonymous"></script>
     <link href="./css/sol2.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>    
+    <script src="js/renderGraph.js"></script>
     <script src="js/sol2.js"></script>
+    <link rel="stylesheet" href="js/treant/Treant.css" type="text/css"/>
+    <script src="js/treant/vendor/raphael.js"></script>
+    <script src="js/treant/Treant.js"></script>
     <title>Solution 2</title>
 </head>
 <body>
-    <div class="inputDiv">
-        <div>
-            <input id="please"value="" data-role="tagsinput">
-        </div>
-        <div class="inputButton">
-            <button type="button" onclick="handleValidate()" class="btn btn-success">Validate</button>
-        </div>
-    </div>
     <div class="container">
-        <span id="result"></span>
+        <div class="inputDiv">
+            <div>
+                <input id="please"value="" data-role="tagsinput">
+            </div>
+            <div class="inputButton">
+                <button type="button" onclick="handleValidate()" class="btn btn-success">Validate</button>
+            </div>
+            <div id="result"></div>
+        </div>
+        
+        <div class="graph">            
+            <div id="tree-orig" style="width:50%; height: 400px"> </div>
+        </div>
     </div>
 </body>
 </html>

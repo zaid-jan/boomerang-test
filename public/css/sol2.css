@@ -9,6 +9,20 @@
     margin-top: 2%;
     margin-bottom: 2%;
 }
+
+.graph {
+    display: flex;
+    flex-direction: row;
+}
+
+#result {
+    margin: auto;
+}
+
+#tree-orig {
+    margin: auto;
+}
+
 .bootstrap-tagsinput {
     background-color: #fff;
     border: 1px solid #ccc;

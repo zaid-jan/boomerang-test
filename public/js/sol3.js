@@ -9,7 +9,8 @@ const handleSumTree = () => {
     console.log("sumtree after", sumTree)
     inorder(sumTree, 0, 0)
     console.log(JSON.stringify(sumTree))
-    wrap(tree, sumTree)
+    wrap(tree, '#tree-orig')
+    wrap(sumTree, '#tree-sum')
 }
 
 const convertToSumTree = (sumTree, curr, sum) => {
