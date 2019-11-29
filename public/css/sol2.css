@@ -15,8 +15,15 @@
     flex-direction: row;
 }
 
+.container {
+    width: 98%
+}
+
 #result {
     margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
 }
 
 #tree-orig {

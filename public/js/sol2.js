@@ -60,6 +60,7 @@ const renderHtml = (res, tree) => {
     let html = ""
     if(res === false ){
         html = 'nope'
+        $('#tree-orig').html("")
     } else {
         html = "yup"
         wrap(tree, '#tree-orig')
